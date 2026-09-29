@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title>הטוויסט שלכם | TWIST</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="בוחרים בסיס, תוספות וקישוט ונותנים שם לקוקטייל האישי.">
+        <!-- קישור לקובץ העיצוב של הטופס -->
+        <meta name="keywords" content="TWIST, קוקטייל אישי, טופס אינטראקטיבי, תוספות, קישוטים">
+        <meta name="author" content="Gal Nili, Einav Hagag">
+        <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/myStyle.css">
+        <link rel="stylesheet" href="styles/cocktailBuilder.css">
+    </head>
+    <body>
+        <header id="pageHeader">
+            <div class="wrap headerInner">
+                <a class="logo english" href="index.html" aria-label="TWIST, דף הבית">TWIST</a>
+                <nav id="mainNav" aria-label="ניווט ראשי">
+                    <ul>
+                        <li><a href="index.html">דף הבית</a></li>
+                        <li>
+                            <a href="recipes.html">מתכונים <span aria-hidden="true">▾</span></a>
+                            <ul class="subNav">
+                                <li><a href="mojito.html">מוחיטו</a></li>
+                                <li><a href="negroni.html">נגרוני</a></li>
+                                <li><a href="espressoMartini.html">אספרסו מרטיני</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="homeBar.html">הבר הביתי</a></li>
+                        <li><a href="techniques.html">טכניקות הכנה</a></li>
+                        <li><a href="glossary.html">מילון הבר</a></li>
+                        <li><a href="cocktailBuilder.html" aria-current="page">הטוויסט שלכם</a></li>
+                    </ul>
+                </nav>
+                <div class="clearFloat">
+                </div>
+            </div>
+        </header>
+
+        <main id="cocktailBuilder">
+            <section class="catalogHeader builderHeader">
+                <div class="wrap">
+
+                    <nav class="breadcrumbs" aria-label="מיקומכם באתר"><ol><li><a href="index.html">דף הבית</a></li><li aria-current="page">הטוויסט שלכם</li></ol></nav>
+                    <p class="eyebrow"><span class="english">MAKE IT YOURS</span></p>
+                    <h1>קצת סקרנות.<br>טוויסט משלכם.</h1>
+                    <p>בחרו בסיס, הוסיפו טעם וסיימו בקישוט קטן לכוס.</p>
+                </div>
+            </section>
+            <div class="wrap builderLayout">
+                <div class="builderForm">
+                    <noscript><p>כדי להשתמש בטופס האינטראקטיבי יש להפעיל JavaScript בדפדפן.</p></noscript>
+                    <p class="builderHint">חמישה צעדים לטוויסט שלכם. שם ובסיס הם חובה, את השאר אפשר לבחור לפי הטעם.</p>
+                    <fieldset>
+                        <legend><span class="stepNumber">01</span> נותנים לו שם</legend>
+                        <label for="cocktailName">שם הקוקטייל (חובה)</label>
+                        <!-- בכל שינוי בשם הקוקטייל, הפעלת הפונקציה שבודקת את שדות החובה -->
+                        <input type="text" id="cocktailName" maxlength="40" required placeholder="למשל: הטוויסט של עינב" class="formControl" oninput="checkForm()">
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="stepNumber">02</span> מתחילים בבסיס</legend>
+                        <p class="builderHint">בחרו אפשרות אחת (חובה).</p>
+                        <!-- בכל שינוי בבחירת הבסיס, הפעלת הפונקציה שבודקת את שדות החובה -->
+                        <label class="choice"><input type="radio" name="cocktailBase" class="formControl cocktailRadio" value="vodkaImage" onchange="checkForm()" required> וודקה</label>
+                        <label class="choice"><input type="radio" name="cocktailBase" class="formControl cocktailRadio" value="ginImage" onchange="checkForm()"> ג׳ין</label>
+                        <label class="choice"><input type="radio" name="cocktailBase" class="formControl cocktailRadio" value="rumImage" onchange="checkForm()"> רום </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="stepNumber">03</span> עם מה מערבבים?</legend>
+                        <p class="builderHint">בחרו אפשרות אחת, או השאירו ״ללא ערבוב״.</p>
+                        <label for="mixer">המשקה לערבוב</label>
+                        <!-- שינוי הערבוב מפעיל את עדכון הטופס והתצוגה -->
+                        <select id="mixer" class="formControl" onchange="checkForm()">
+                            <option value="ללא ערבוב">ללא ערבוב</option>
+                            <option value="טוניק">טוניק</option>
+                            <option value="סודה">סודה</option>
+                            <option value="רדבול">רדבול</option>
+                            <option value="לימונדה">לימונדה</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="stepNumber">04</span> מוסיפים טעם</legend>
+                        <p class="builderHint">לימון, נענע או פירות יער — אפשר לסמן כמה תוספות, או לוותר על כולן.</p>
+                        <!-- כל שינוי בסימון תוספת מפעיל עדכון מיידי של שקיפות התמונות -->
+                        <label class="choice"><input type="checkbox" class="formControl extraCheckbox" value="lemonImage" onchange="checkForm()">לימון</label>
+                        <label class="choice"><input type="checkbox" class="formControl extraCheckbox" value="mintImage" onchange="checkForm()">נענע</label>
+                        <label class="choice"><input type="checkbox" class="formControl extraCheckbox" value="berriesImage" onchange="checkForm()">פירות יער</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="stepNumber">05</span> הטאץ׳ האחרון</legend>
+                        <p class="builderHint">שפת סוכר או מטרייה קטנה? אפשר לבחור בשניהם, או להשאיר את הכוס בלי קישוט.</p>
+                        <!-- גם הקישוטים נכללים באוסף תיבות הסימון ונבדקים באותה פונקציה -->
+                        <label class="choice"><input type="checkbox" class="formControl extraCheckbox" value="sugarImage" onchange="checkForm()">שפת סוכר</label>
+                        <label class="choice"><input type="checkbox" class="formControl extraCheckbox" value="umbrellaImage" onchange="checkForm()"> מטריית קוקטייל</label>
+                    </fieldset>
+                    <!-- הנחיה המתעדכנת לפי תקינות שדות החובה -->
+                    <p id="formMessage" class="builderHint" aria-live="polite">כדי להכין את הקוקטייל, הזינו שם ובחרו בסיס.</p>
+                    <!-- בלחיצה על כפתור הסיום, פתיחת חלון הקוקטייל -->
+                    <input type="button" id="orderButton" aria-describedby="formMessage" class="formControl submitButton" value="זה הטוויסט שלי" onclick="openPopup()" disabled>
+                    <!-- הפעלת איפוס הטופס בלחיצה על הכפתור -->
+                    <button type="button" id="resetButton" class="formControl resetButton" onclick="resetForm()">מתחילים מחדש</button>
+                </div>
+                <aside class="builderPreview" aria-label="מרכיבים ותצוגת הקוקטייל">
+                    <div class="previewCopy">
+                        <p class="eyebrow">THE INGREDIENTS</p>
+                        <h2>הטוויסט שלכם</h2>
+                        <p class="previewNote">כאן יתרכזו הבחירות שלכם. בסיום, הקוקטייל האישי יוצג בחלון עם כל הפרטים.</p>
+                    </div>
+                    <!-- רק הבקבוק הגנרי גלוי לפני בחירה. -->
+                    <div class="productShelf" aria-live="polite">
+                        <figure id="genericBottle"><img src="images/cocktail-builder/generic-bottle.png" alt="בקבוק ללא תווית"><figcaption>הבסיס שלכם מחכה לבחירה</figcaption></figure>
+                        <figure id="vodkaImage" class="selectedBottle"><img src="images/cocktail-builder/vodka.png" alt="בקבוק וודקה"><figcaption>וודקה</figcaption></figure>
+                        <figure id="ginImage" class="selectedBottle"><img src="images/cocktail-builder/gin.png" alt="בקבוק ג׳ין"><figcaption>ג׳ין</figcaption></figure>
+                        <figure id="rumImage" class="selectedBottle"><img src="images/cocktail-builder/rum.png" alt="בקבוק רום"><figcaption>רום</figcaption></figure>
+                        <p id="mixerPreview">לערבוב: ללא ערבוב</p>
+                    </div>
+                    <h3 class="shelfTitle">תוספות</h3>
+                    <div class="extraShelf">
+                        <figure><img id="lemonImage" class="extra-image" src="images/cocktail-builder/lemon.png" alt="לימון"><figcaption>לימון</figcaption></figure>
+                        <figure><img id="mintImage" class="extra-image" src="images/cocktail-builder/mint.png" alt="נענע"><figcaption>נענע</figcaption></figure>
+                        <figure><img id="berriesImage" class="extra-image" src="images/cocktail-builder/berries-v2.png" alt="פירות יער על קיסם"><figcaption>פירות יער</figcaption></figure>
+                    </div>
+                    <h3 class="shelfTitle">קישוטים לכוס</h3>
+                    <div class="extraShelf">
+                        <figure><img id="sugarImage" class="extra-image" src="images/cocktail-builder/sugar.png" alt="שפת סוכר"><figcaption>שפת סוכר</figcaption></figure>
+                        <figure><img id="umbrellaImage" class="extra-image" src="images/cocktail-builder/umbrella.png" alt="מטריית קוקטייל"><figcaption>מטריית קוקטייל</figcaption></figure>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <!-- הפופאפ מופיע רק לאחר אישור שדות החובה. -->
+        <div id="finishPopup" class="finishPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" onkeydown="popupKeyboard(event)">
+            <div class="popupContent">
+                <div class="popupText">
+                    <p class="eyebrow">YOUR TWIST</p>
+                    <h2 id="popupTitle">הטוויסט שלכם מוכן</h2>
+                    <p id="popupName" class="summaryField">שם הקוקטייל:</p>
+                    <p id="popupBase" class="summaryField">בסיס:</p>
+                    <p id="popupMixer" class="summaryField">לערבוב:</p>
+                    <p id="popupExtras" class="summaryField">תוספות:</p>
+                    <p id="popupDecorations" class="summaryField">קישוטים:</p>
+                    <p class="previewNote">כל הבחירות שלכם, בטוויסט אחד. לחיים!</p>
+                    <!-- בלחיצה על כפתור החזרה, סגירת חלון הסיום -->
+                    <button type="button" id="closePopup" onclick="closePopup()">חזרה לטופס</button>
+                </div>
+                <!-- המחשה משולבת בעלת תיאור נגיש; תמונות השכבות עם alt ריק כדי למנוע הקראה כפולה. הבחירות מפורטות בטקסט הסיכום. -->
+                <div id="finalCocktail" class="glassStage" role="img" aria-label="המחשת הקוקטייל לפי הבחירות">
+                    <img id="clearGlass" class="glassBase" src="images/cocktail-builder/clear-glass.png" alt="">
+                    <img id="rumGlass" class="glassBase" src="images/cocktail-builder/glass.png" alt="">
+                    <img id="lemonadeGlass" class="glassBase" src="images/cocktail-builder/lemonade-glass.png" alt="">
+                    <img id="finalUmbrella" class="glassLayer umbrellaLayer" src="images/cocktail-builder/umbrella.png" alt="">
+                    <img id="finalMint" class="glassLayer mintLayer" src="images/cocktail-builder/mint.png" alt="">
+                    <img id="finalSugar" class="glassLayer sugarLayer" src="images/cocktail-builder/sugar.png" alt="">
+                    <img id="finalLemon" class="glassLayer lemonLayer" src="images/cocktail-builder/lemon.png" alt="">
+                    <img id="finalBerries" class="glassLayer berriesLayer" src="images/cocktail-builder/berries-v2.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <footer id="pageFooter">
+            <div class="wrap">
+                <div class="footerBrand">
+                    <a class="logo english" href="index.html">TWIST</a>
+                    <p>גל נילי ועינב חג׳ג׳ · HIT</p>
+                </div>
+                <div class="footerCopy" id="aboutTwist">
+                    <ul>
+                        <li><a href="about.html">אודות</a></li>
+                        <li><a href="contactUs.html">צור קשר</a></li>
+                        <li><a href="siteMap.html">מפת האתר</a></li>
+                        <li><a href="about.html#handwriting">כתב היד שמלווה אותנו</a></li>
+                    </ul>
+                </div>
+                <div class="clearFloat">
+                </div>
+                <div class="footerEnd">
+                    <p>פרויקט בקורס פיתוח אתרי אינטרנט · הפקולטה לטכנולוגיות למידה, HIT · צילומי הקוקטיילים והציוד נוצרו בבינה מלאכותית.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- טעינת הפונקציות לאחר יצירת רכיבי העמוד -->
+        <script src="jScripts/JavaScript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,446 @@
+/* עיצוב הטופס בלבד; הגופנים והניווט נטענים מעיצוב האתר המשותף. */
+
+#cocktailBuilder input,
+#finishPopup input,
+#cocktailBuilder select,
+#finishPopup select {
+    font-family: "Assistant", Arial, sans-serif;
+}
+#cocktailBuilder select,
+#finishPopup select {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    font-size: 18px;
+    background: #faf8f1;
+    color: #26352a;
+    border: 1px solid #aaa38f;
+}
+#cocktailBuilder h1,
+#finishPopup h1,
+#cocktailBuilder h2,
+#finishPopup h2,
+#cocktailBuilder p,
+#finishPopup p {
+    margin: 0;
+}
+#cocktailBuilder h1,
+#finishPopup h1,
+#cocktailBuilder h2,
+#finishPopup h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+#cocktailBuilder p,
+#finishPopup p {
+    font-size: 18px;
+}
+#cocktailBuilder fieldset,
+#finishPopup fieldset {
+    min-width: 0;
+    border: 0;
+    margin: 0;
+}
+#cocktailBuilder img,
+#finishPopup img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#cocktailBuilder .wrap,
+#finishPopup .wrap {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+#cocktailBuilder .english,
+#finishPopup .english {
+    display: inline-block;
+    direction: ltr;
+}
+#cocktailBuilder .eyebrow,
+#finishPopup .eyebrow {
+    font-size: 14px;
+    color: #73562c;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+#cocktailBuilder .catalogHeader,
+#finishPopup .catalogHeader {
+    background-color: #15251c;
+    color: #f2f0e9;
+    padding-top: 32px;
+}
+#cocktailBuilder .catalogHeader .eyebrow,
+#finishPopup .catalogHeader .eyebrow {
+    color: #d0b57e;
+}
+#cocktailBuilder .catalogHeader h1,
+#finishPopup .catalogHeader h1 {
+    margin-bottom: 16px;
+}
+#cocktailBuilder .catalogHeader p,
+#finishPopup .catalogHeader p {
+    color: #d6d9cd;
+}
+#cocktailBuilder .submitButton,
+#finishPopup .submitButton {
+    padding: 14px 24px;
+    font-size: 18px;
+    color: #f2f0e9;
+    background-color: #24382a;
+    border: 1px solid #24382a;
+}
+#cocktailBuilder .builderHeader {
+    padding-bottom: 42px;
+}
+#cocktailBuilder .builderHeader h1 {
+    font-size: 52px;
+}
+#cocktailBuilder .builderLayout,
+#finishPopup .builderLayout {
+    padding-top: 46px;
+    padding-bottom: 65px;
+    text-align: center;
+}
+#cocktailBuilder .builderForm,
+#finishPopup .builderForm,
+#cocktailBuilder .builderPreview,
+#finishPopup .builderPreview {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+#cocktailBuilder .builderForm,
+#finishPopup .builderForm {
+    width: 540px;
+    max-width: 100%;
+    margin-left: 4%;
+}
+#cocktailBuilder .builderPreview,
+#finishPopup .builderPreview {
+    width: 420px;
+    max-width: 100%;
+    background-color: #e7e5da;
+}
+#cocktailBuilder .builderForm fieldset,
+#finishPopup .builderForm fieldset {
+    padding: 22px 0 30px;
+    border-bottom: 1px solid #cfcabb;
+    margin-bottom: 22px;
+}
+#cocktailBuilder .builderForm legend,
+#finishPopup .builderForm legend {
+    font-size: 28px;
+    font-weight: 300;
+}
+#cocktailBuilder .stepNumber,
+#finishPopup .stepNumber {
+    display: inline-block;
+    margin-left: 12px;
+    color: #73562c;
+    font-size: 18px;
+}
+#cocktailBuilder .builderForm label,
+#finishPopup .builderForm label {
+    font-size: 18px;
+}
+#cocktailBuilder .builderForm input[type="text"],
+#finishPopup .builderForm input[type="text"] {
+    display: block;
+    width: 90%;
+    margin-top: 12px;
+    padding: 12px 4%;
+    font-size: 18px;
+    border: 1px solid #aaa38f;
+    background-color: #faf8f1;
+    color: #26352a;
+}
+#cocktailBuilder .builderHint {
+    font-size: 16px;
+    color: #60685f;
+    margin-bottom: 16px;
+}
+#cocktailBuilder .builderForm .choice,
+#finishPopup .builderForm .choice {
+    display: inline-block;
+    padding: 12px 15px;
+    margin: 6px 0 6px 8px;
+    border: 1px solid #cfcabb;
+    background-color: #faf8f1;
+    cursor: pointer;
+}
+#cocktailBuilder .builderForm .choice:hover,
+#finishPopup .builderForm .choice:hover {
+    border-color: #8f764e;
+}
+#cocktailBuilder .builderForm input,
+#finishPopup .builderForm input {
+    vertical-align: middle;
+}
+#cocktailBuilder .builderForm input:focus-visible,
+#finishPopup .builderForm input:focus-visible {
+    outline: 2px solid #73562c;
+    outline-offset: 4px;
+}
+#cocktailBuilder .builderForm .submitButton,
+#finishPopup .builderForm .submitButton {
+    width: 100%;
+    cursor: pointer;
+}
+#cocktailBuilder .builderForm .submitButton:disabled,
+#finishPopup .builderForm .submitButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+#cocktailBuilder .resetButton,
+#finishPopup .resetButton {
+    display: block;
+    margin: 14px auto 0;
+    padding: 10px 22px;
+    font: inherit;
+    color: #24382a;
+    border: 1px solid #aaa38f;
+    background-color: transparent;
+    cursor: pointer;
+}
+#cocktailBuilder button:focus-visible,
+#finishPopup button:focus-visible,
+#cocktailBuilder select:focus-visible,
+#finishPopup select:focus-visible {
+    outline: 2px solid #73562c;
+    outline-offset: 4px;
+}
+#cocktailBuilder #result,
+#finishPopup #result {
+    margin-top: 22px;
+    font-size: 18px;
+}
+#cocktailBuilder .previewCopy,
+#finishPopup .previewCopy {
+    padding: 28px;
+}
+#cocktailBuilder .previewCopy h2,
+#finishPopup .previewCopy h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+#cocktailBuilder .previewCopy p,
+#finishPopup .previewCopy p {
+    margin-bottom: 16px;
+}
+#cocktailBuilder .handwritten {
+    font-family: "Yehezkel", "Assistant", sans-serif;
+    font-size: 30px;
+    color: #73562c;
+}
+#cocktailBuilder .previewNote,
+#finishPopup .previewNote {
+    font-size: 15px;
+    color: #60685f;
+}
+#cocktailBuilder .productShelf,
+#finishPopup .productShelf,
+#cocktailBuilder .extraShelf,
+#finishPopup .extraShelf {
+    text-align: center;
+    padding: 0 12px 18px;
+}
+#cocktailBuilder .productShelf figure,
+#finishPopup .productShelf figure,
+#cocktailBuilder .extraShelf figure,
+#finishPopup .extraShelf figure {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 1%;
+}
+#cocktailBuilder .productShelf figure,
+#finishPopup .productShelf figure {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+#cocktailBuilder .productShelf .selectedBottle,
+#finishPopup .productShelf .selectedBottle {
+    display: none;
+}
+#cocktailBuilder #genericBottle img,
+#finishPopup #genericBottle img {
+    opacity: 0.5;
+}
+#cocktailBuilder #mixerPreview,
+#finishPopup #mixerPreview {
+    margin-top: 16px;
+    font-size: 17px;
+}
+#cocktailBuilder .extraShelf figure,
+#finishPopup .extraShelf figure {
+    width: 28%;
+}
+#cocktailBuilder .productShelf img,
+#finishPopup .productShelf img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+#cocktailBuilder .extraShelf img,
+#finishPopup .extraShelf img {
+    width: 100%;
+    height: 86px;
+    object-fit: contain;
+    opacity: 0.5;
+}
+#cocktailBuilder figcaption,
+#finishPopup figcaption {
+    font-size: 16px;
+}
+#cocktailBuilder .shelfTitle,
+#finishPopup .shelfTitle {
+    font-size: 21px;
+    font-weight: 400;
+    padding: 0 24px;
+    margin: 4px 0 12px;
+}
+#finishPopup.finishPopup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#cocktailBuilder .popupContent,
+#finishPopup .popupContent {
+    width: 92%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 28px;
+    box-sizing: border-box;
+    background-color: #f2f0e9;
+    text-align: right;
+}
+#cocktailBuilder .popupText,
+#finishPopup .popupText {
+    display: inline-block;
+    width: 48%;
+    margin-left: 3%;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+#cocktailBuilder .popupText h2,
+#finishPopup .popupText h2 {
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+#cocktailBuilder .summaryField,
+#finishPopup .summaryField {
+    padding: 12px 0;
+    border-bottom: 1px solid #cfcabb;
+}
+#cocktailBuilder .popupText .previewNote,
+#finishPopup .popupText .previewNote {
+    margin-top: 18px;
+}
+#cocktailBuilder #closePopup,
+#finishPopup #closePopup {
+    margin-top: 16px;
+    padding: 10px 24px;
+    font: inherit;
+    color: #f2f0e9;
+    background-color: #24382a;
+    border: 0;
+    cursor: pointer;
+}
+#cocktailBuilder .glassStage,
+#finishPopup .glassStage {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 47%;
+    aspect-ratio: 1;
+    background-color: #15251c;
+    overflow: hidden;
+}
+#cocktailBuilder .glassBase,
+#finishPopup .glassBase {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#cocktailBuilder #rumGlass,
+#finishPopup #rumGlass,
+#cocktailBuilder #lemonadeGlass,
+#finishPopup #lemonadeGlass {
+    opacity: 0;
+}
+#cocktailBuilder .glassLayer,
+#finishPopup .glassLayer {
+    position: absolute;
+    height: auto;
+    opacity: 0;
+}
+#cocktailBuilder .umbrellaLayer,
+#finishPopup .umbrellaLayer {
+    width: 28%;
+    left: 51%;
+    top: 0%;
+}
+#cocktailBuilder .mintLayer,
+#finishPopup .mintLayer {
+    width: 24%;
+    left: 33%;
+    top: 2%;
+}
+#cocktailBuilder .sugarLayer,
+#finishPopup .sugarLayer {
+    width: 42%;
+    height: 28%;
+    left: 29%;
+    top: 1.5%;
+}
+#cocktailBuilder .lemonLayer,
+#finishPopup .lemonLayer {
+    width: 24%;
+    left: 25%;
+    top: 12%;
+}
+#cocktailBuilder .berriesLayer,
+#finishPopup .berriesLayer {
+    width: 48%;
+    left: 28%;
+    top: -9%;
+}
+
+@media (max-width: 700px) {
+    #cocktailBuilder .builderForm {
+        margin-left: 0;
+    }
+#cocktailBuilder .builderPreview,
+#finishPopup .builderPreview {
+        margin-top: 30px;
+    }
+#cocktailBuilder .popupText,
+#finishPopup .popupText {
+        width: 100%;
+        margin-left: 0;
+    }
+#cocktailBuilder .glassStage,
+#finishPopup .glassStage {
+        display: block;
+        width: 100%;
+        margin-top: 24px;
+    }
+#cocktailBuilder .builderHeader h1 {
+        font-size: 40px;
+    }
+}
+
+#cocktailBuilder figure, #cocktailBuilder figcaption { font-family: "Assistant", Arial, sans-serif; }
+#cocktailBuilder select { box-sizing: border-box; }
+#cocktailBuilder .builderForm { margin-left: 0; }
+#cocktailBuilder .builderPreview { margin-right: 3%; }
+@media (max-width: 1100px) {
+    #cocktailBuilder .builderPreview { margin: 30px 0 0; }
+}
