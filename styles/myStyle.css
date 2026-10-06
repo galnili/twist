@@ -1,8 +1,6 @@
-/* TWIST — עיצוב האתר
-   גופנים מקומיים, מודל הקופסה, inline-block, float ומיקומים מהקורס.
-   clear ו-vertical-align אושרו על ידי גל. */
+/* העיצוב המשותף לכל עמודי האתר. */
 
-/* 1. גופנים */
+/* גופני האתר. */
 @font-face {
     font-family: "Assistant";
     src: url("../fonts/assistant-300.ttf") format("truetype");
@@ -25,7 +23,7 @@
     font-weight: 400;
 }
 
-/* 2. יסודות ופריסה משותפת */
+/* עיצוב הטקסט והרוחב של אזורי התוכן. */
 body, div, span, p, h1, h2, h3, h4, a, li, ul, ol, strong,
 header, footer, main, nav, section, article, aside, table, th, td,
 form, fieldset, legend, label, input, select, option, textarea, caption {
@@ -51,6 +49,7 @@ img { display: block; width: 100%; height: auto; }
 ul, ol { padding: 0; }
 .wrap { width: 90%; max-width: 1140px; margin: 0 auto; }
 .narrow { width: 88%; max-width: 760px; margin: 0 auto; }
+/* התוכן שאחרי האלמנטים הצפים מתחיל מתחתיהם. */
 .clearFloat { clear: both; }
 .eyebrow {
     color: #806238;
@@ -77,7 +76,7 @@ ul, ol { padding: 0; }
 .sectionHead p:last-child { color: #60685f; margin-top: 20px; }
 .section { padding: 90px 0; }
 
-/* 3. ניווט: גובה טבעי מאפשר גלישה לשורה נוספת בחלון צר */
+/* הלוגו והתפריט העליון. */
 #pageHeader { background-color: #101c16; color: #f2f0e9; }
 .headerInner { padding: 23px 0; text-align: center; }
 .logo {
@@ -108,7 +107,7 @@ ul, ol { padding: 0; }
 }
 #mainNav a:hover { color: #ffffff; border-color: #ffffff; }
 #mainNav a:active { color: #d6bd90; border-color: #d6bd90; }
-/* תפריט מקונן לפי הקורס. קישור הקטגוריה מוביל גם לעמוד כל המתכונים. */
+/* רשימת המתכונים מוסתרת עד שמעבירים עכבר על התפריט. */
 #mainNav .subNav {
     display: none;
     position: absolute;
@@ -129,13 +128,14 @@ ul, ol { padding: 0; }
 .breadcrumbs { padding: 22px 0; }
 .breadcrumbs ol { list-style: none; font-size: 14px; }
 .breadcrumbs li { display: inline-block; color: #b6beae; }
+/* מוסיפים / בין הקישורים. */
 .breadcrumbs li:after { content: " / "; padding: 0 12px; color: #89967e; }
 .breadcrumbs li:last-child:after { content: ""; padding: 0; }
 .breadcrumbs a { display: inline-block; padding: 8px 0; color: #d7ddcf; }
 .breadcrumbs a:hover { color: #ffffff; }
 .breadcrumbs a:active { color: #d6bd90; }
 
-/* 4. הבית: פתיח מצולם נקי, ללא מסגרת */
+/* פתיחת דף הבית. */
 .homeHero {
     background-color: #0b150f;
     background-image: url("../images/heroEditorial.jpg");
@@ -157,7 +157,8 @@ ul, ol { padding: 0; }
 .homeHero .textLink:hover { color: #ffffff; border-color: #ffffff; }
 .homeHero .textLink:active { color: #d6bd90; border-color: #d6bd90; }
 
-/* 5. כרטיסיות: אותה מחלקה קובעת מידות לכל המסגרות */
+/* כרטיסי המתכונים. */
+/* font-size: 0 מסיר את הרווח שנוצר בין הכרטיסים. */
 .cards { text-align: center; font-size: 0; }
 .recipeCard {
     display: inline-block;
@@ -180,10 +181,12 @@ ul, ol { padding: 0; }
 .cardContent .eyebrow { font-size: 11px; margin-bottom: 12px; letter-spacing: 1px; }
 .cardContent h3 { font-size: 31px; margin-bottom: 13px; }
 .cardContent p { font-size: 16px; line-height: 1.65; color: #60685f; }
+/* הקישור נשאר בתחתית הכרטיס בזכות המיקום המוחלט. */
 .cardMore { position: absolute; bottom: 22px; right: 25px; font-size: 15px; color: #73562c; transition: color 0.2s; }
 .recipeCard:hover .cardMore { color: #1e2922; text-decoration: underline; }
 .recipeCard:active .cardMore { color: #6b4e28; }
 .cardMore span { margin-right: 16px; }
+/* אזור עם טקסט ותמונה לצד המתכונים. */
 .feature { background-color: #e7e5da; padding: 80px 0; }
 .featurePhoto { display: inline-block; vertical-align: top; width: 520px; max-width: 100%; }
 .featureCopy { display: inline-block; vertical-align: top; width: 420px; max-width: 90%; padding: 35px 4%; }
@@ -191,7 +194,7 @@ ul, ol { padding: 0; }
 .feature .wrap { text-align: center; }
 .featureCopy { text-align: right; }
 
-/* 6. מרכז המתכונים */
+/* פתיחת עמוד המתכונים. */
 .catalogHeader { background-color: #15251c; color: #f2f0e9; padding-bottom: 70px; }
 .catalogHeader h1 { font-size: 64px; line-height: 1.15; margin: 24px 0 22px; }
 .catalogHeader p { max-width: 650px; font-size: 20px; font-weight: 300; color: #d6d9cd; }
@@ -201,7 +204,7 @@ ul, ol { padding: 0; }
 .catalogNav a:hover { color: #ffffff; border-color: #ffffff; }
 .catalogNav a:active { color: #d6bd90; border-color: #d6bd90; }
 
-/* 7. מתכון: פתיחה פתוחה ותמונה גדולה, בזרימה טבעית */
+/* שם הקוקטייל, התמונה ופרטי המתכון. */
 .recipeOpening { background-color: #112017; color: #f2f0e9; }
 .recipeOpening .wrap { text-align: center; }
 .recipeOpening .breadcrumbs { text-align: right; }
@@ -226,7 +229,7 @@ ul, ol { padding: 0; }
 .recipeFacts span { display: block; font-size: 12px; color: #bec5b4; margin-bottom: 6px; }
 .recipeFacts strong { font-size: 17px; font-weight: 400; color: #f0eddf; }
 
-/* 8. מרכיבים: פתק אחד על משטח, בלי מסגרת צמודה נוספת */
+/* פתק המרכיבים וגופן כתב היד. */
 .ingredientsChapter { padding: 86px 0 0; }
 .chapterHeading { text-align: center; margin-bottom: 42px; }
 .chapterHeading p:last-child { color: #60685f; margin: 20px auto 0; max-width: 560px; }
@@ -246,12 +249,14 @@ ul, ol { padding: 0; }
     padding: 48px 0 44px;
     color: #26352e;
 }
+/* תמונת הנייר מכסה את הפתק. הטקסט מוצג מעליה. */
 .paperTexture { position: absolute; top: 0; right: 0; width: 100%; height: 100%; }
 .paperContent { position: relative; padding: 0 10%; }
 .paperTop { margin-bottom: 26px; padding-bottom: 17px; border-bottom: 1px solid #c8bda6; }
 .paperTop p { color: #6c6655; font-size: 13px; }
 .paperTop h3 { font-size: 30px; margin-bottom: 6px; }
 .ingredients { list-style: none; }
+/* גופן כתב היד מופיע רק ברשימת המרכיבים. */
 .ingredients li {
     font-family: "Yehezkel", "Assistant", Arial, sans-serif;
     font-weight: 400;
@@ -268,12 +273,13 @@ ul, ol { padding: 0; }
 .fontCredit a:hover { color: #1e2922; }
 .fontCredit a:active { color: #6b4e28; }
 
-/* 9. ההכנה: צעדים גדולים לאורך הגלילה */
+/* שלבי ההכנה וההגשה. */
 .methodChapter { padding: 92px 0 70px; }
 .methodSteps { list-style: none; }
 .methodSteps li { padding: 28px 0 35px; border-bottom: 1px solid #d7d3c5; }
 .methodSteps li:last-child { border-bottom: 0; }
 .stepNumber { float: right; width: 68px; font-size: 54px; font-weight: 300; line-height: 1.1; color: #92774c; }
+/* משאירים מקום למספר שמימין לטקסט. */
 .stepCopy { margin-right: 88px; }
 .methodSteps h3 { color: #233129; font-size: 30px; margin-bottom: 14px; }
 .methodSteps p { color: #5a6459; font-size: 19px; line-height: 1.85; }
@@ -291,7 +297,7 @@ ul, ol { padding: 0; }
 .nextRecipe { padding: 70px 0 84px; text-align: center; }
 .nextRecipe h2 { margin-bottom: 18px; }
 
-/* 10. תחתית */
+/* תחתית האתר. */
 #pageFooter { background-color: #101c16; padding: 55px 0 35px; color: #cbd1c1; }
 .footerBrand { float: left; text-align: left; }
 .footerBrand .logo { float: none; }
@@ -306,7 +312,7 @@ ul, ol { padding: 0; }
 .footerEnd { margin-top: 35px; padding-top: 22px; border-top: 1px solid #354032; }
 .footerEnd p { font-size: 12px; color: #b7bfac; }
 
-/* 11. עמודי הדרכה ואודות: טקסט פתוח לאורך הגלילה */
+/* עמודי ההדרכה והאודות. */
 .editorial h2 { margin-bottom: 26px; }
 .editorial h3 { margin: 34px 0 16px; }
 .editorial p { margin-bottom: 22px; color: #576153; line-height: 1.85; }
@@ -321,6 +327,7 @@ ul, ol { padding: 0; }
 .routeList p { margin: 10px 0 0; font-size: 17px; }
 .readingList { padding-right: 24px; }
 .readingList li { padding: 9px 0; font-size: 18px; line-height: 1.8; }
+/* הריפוד שומר על יחס של 16 ל-9 למסגרת הסרטון. */
 .videoFrame { position: relative; height: 0; padding-top: 56.25%; margin: 30px 0 18px; background-color: #101c16; }
 .videoFrame iframe { position: absolute; top: 0; right: 0; width: 100%; height: 100%; border: 0; }
 .editorial .mediaCaption { font-size: 14px; }
@@ -332,17 +339,18 @@ ul, ol { padding: 0; }
 .pageIndex { list-style: none; margin: 26px 0 48px; }
 .pageIndex li { display: inline-block; width: 210px; max-width: 100%; padding: 8px 0; font-size: 18px; }
 
-/* 12. מילון: שתי עמודות, כותרות טבלה ופסים בשורות זוגיות */
-.glossaryTable { width: 100%; margin-top: 32px; border-collapse: collapse; line-height: 1.8; }
-.glossaryTable caption { font-size: 15px; text-align: right; margin-bottom: 16px; color: #62695e; }
+/* טבלת המונחים. */
+.glossaryTable { width: 100%; margin-top: 0; border-collapse: collapse; line-height: 1.8; }
+.editorial .glossaryCaption { font-size: 15px; text-align: right; margin: 32px 0 16px; color: #62695e; line-height: 1.8; }
 .glossaryTable th, .glossaryTable td { padding: 22px 4%; text-align: right; vertical-align: top; border-bottom: 1px solid #d2ccbd; font-size: 18px; }
 .glossaryTable th { width: 30%; font-weight: 600; }
 .glossaryTable thead th { background-color: #203025; color: #f2f0e9; }
+/* צבע רקע שונה לכל שורה זוגית בטבלה. */
 .glossaryTable tbody tr:nth-child(even) { background-color: #e8e5d9; }
 .termEnglish { display: block; margin-top: 7px; font-size: 14px; font-weight: 400; color: #646b5f; text-align: right; }
 .glossaryTable td a { display: block; margin-top: 14px; font-size: 15px; }
 
-/* 13. טופס הדגמה: תוויות גלויות ואימות HTML מובנה */
+/* טופס ההדגמה בעמוד צור קשר. */
 .editorial .formHint { font-size: 15px; margin: 30px 0 20px; }
 .contactForm fieldset { border: 1px solid #c9c3b1; padding: 30px 5% 38px; }
 .contactForm legend { padding: 0 12px; font-size: 22px; color: #344331; }
@@ -360,11 +368,12 @@ ul, ol { padding: 0; }
 .demoResult h3 { margin-top: 0; }
 .demoResult p { font-size: 16px; }
 
-/* 14. מפת אתר: רשימות מקוננות; נושאים עתידיים מוצגים כטקסט בלבד */
+/* מפת האתר. */
 .siteTree { list-style: none; margin-top: 38px; }
 .siteTree > li > a { font-size: 30px; }
 .siteTree ul { list-style: none; padding-right: 7%; }
 .siteTree li { padding: 13px 0; font-size: 21px; line-height: 1.8; }
 .siteTree ul ul li { padding: 6px 0; font-size: 17px; }
 .siteTree .upcomingItem { color: #676c60; font-size: 15px; }
+/* מסתירים קישורים לנושאים שעדיין לא פותחו. */
 .notActive { display: none; }

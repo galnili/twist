@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+    <!-- הגדרות העמוד וטעינת קובצי העיצוב. -->
     <head>
         <meta charset="utf-8" />
         <title>מוחיטו | TWIST</title>
@@ -12,6 +13,7 @@
         <link rel="stylesheet" href="styles/myStyle.css" />
     </head>
     <body>
+        <!-- הלוגו והתפריט העליון, שמופיעים בכל עמוד. -->
         <header id="pageHeader">
             <div class="wrap headerInner">
                 <a class="logo english" href="index.html" aria-label="TWIST, דף הבית">TWIST</a>
@@ -19,9 +21,10 @@
                     <ul>
                         <li><a href="index.html">דף הבית</a></li>
                         <li>
-                            <a href="recipes.html" class="current">מתכונים <span aria-hidden="true">▾</span></a>
+                            <a href="recipes.html" class="current">מתכונים <span>▾</span></a>
+                            <!-- תפריט המתכונים נפתח במעבר עכבר. -->
                             <ul class="subNav">
-                                <li><a href="mojito.html" class="current" aria-current="page">מוחיטו</a></li>
+                                <li><a href="mojito.html" class="current">מוחיטו</a></li>
                                 <li><a href="negroni.html">נגרוני</a></li>
                                 <li><a href="espressoMartini.html">אספרסו מרטיני</a></li>
                             </ul>
@@ -37,18 +40,21 @@
             </div>
         </header>
         <main>
+            <!-- שם הקוקטייל, התמונה ופרטי המתכון. -->
             <section class="recipeOpening">
                 <div class="wrap">
+                    <!-- קישורים שמראים איפה אנחנו באתר. -->
                     <nav class="breadcrumbs" aria-label="מיקומכם באתר">
                         <ol>
                             <li><a href="index.html">דף הבית</a></li>
                             <li><a href="recipes.html">מתכונים</a></li>
-                            <li aria-current="page">מוחיטו</li>
+                            <li>מוחיטו</li>
                         </ol>
                     </nav>
                     <div class="recipeTitle">
                         <h1>מוחיטו</h1>
                         <p class="subtitle">קוקטייל רענן של רום לבן, ליים ונענע, שמכינים ישירות בכוס.</p>
+                        <!-- כל קישור עם # מוביל למזהה של חלק בהמשך העמוד. -->
                         <ul class="recipeJump">
                             <li><a href="#ingredients">המרכיבים</a></li>
                             <li><a href="#method">אופן ההכנה</a></li>
@@ -64,11 +70,13 @@
                     <li><span>זמן משוער</span><strong>כ־5 דקות</strong></li>
                 </ul>
             </section>
+            <!-- המרכיבים והכמויות לכוס אחת. -->
             <section class="ingredientsChapter" id="ingredients">
                 <div class="chapterHeading narrow">
                     <h2>מרכיבים לכוס אחת</h2>
                 </div>
                 <div class="noteStage">
+                    <!-- תמונת הנייר ברקע, והמרכיבים כתובים מעליה כטקסט. -->
                     <div class="recipePaper">
                         <img class="paperTexture" src="images/recipePaperWeb.png" alt="" />
                         <div class="paperContent">
@@ -84,7 +92,7 @@
                                 <li>קרח כתוש</li>
                             </ul>
                             <p class="paperBottom">לקישוט: ענף נענע ופרוסת ליים.</p>
-                            <a class="textLink" href="#method">לאופן ההכנה <span aria-hidden="true">↓</span></a>
+                            <a class="textLink" href="#method">לאופן ההכנה <span>↓</span></a>
                         </div>
                     </div>
                 </div>
@@ -93,15 +101,16 @@
                         ממיזם <a href="https://www.ot-hayim.co.il/fonts/yehezkel-razilov/">אות.חיים</a>. עיצוב הגופן: עטרה גבריאלי.</p>
                 </div>
             </section>
+            <!-- שלבי ההכנה לפי הסדר. -->
             <section class="methodChapter" id="method">
                 <div class="narrow">
                     <div class="sectionHead">
                         <h2>אופן ההכנה</h2>
-                        <a class="textLink" href="#ingredients">חזרה למרכיבים <span aria-hidden="true">↑</span></a>
+                        <a class="textLink" href="#ingredients">חזרה למרכיבים <span>↑</span></a>
                     </div>
                     <ol class="methodSteps">
                         <li>
-                            <span class="stepNumber" aria-hidden="true">01</span>
+                            <span class="stepNumber">01</span>
                             <div class="stepCopy">
                                 <h3>מתחילים בנענע ובליים</h3>
                                 <p>מניחים בכוס גבוהה את הנענע, הסוכר ומיץ הליים. מערבבים בעדינות ולוחצים קלות על הנענע, כדי לשחרר את הריח שלה.</p>
@@ -111,7 +120,7 @@
                             </div>
                         </li>
                         <li>
-                            <span class="stepNumber" aria-hidden="true">02</span>
+                            <span class="stepNumber">02</span>
                             <div class="stepCopy">
                                 <h3>מוסיפים סודה וקרח</h3>
                                 <p>מוסיפים מעט סודה וממלאים את הכוס בקרח כתוש.</p>
@@ -121,7 +130,7 @@
                             </div>
                         </li>
                         <li>
-                            <span class="stepNumber" aria-hidden="true">03</span>
+                            <span class="stepNumber">03</span>
                             <div class="stepCopy">
                                 <h3>מוסיפים רום ומערבבים</h3>
                                 <p>מודדים את הרום, מוזגים לכוס ומשלימים בסודה. מערבבים בעדינות בעזרת כף ארוכה, כך שהמרכיבים יתפזרו בכוס.</p>
@@ -130,7 +139,7 @@
                             </div>
                         </li>
                     </ol>
-                    <a class="textLink" href="#serve">להגשה <span aria-hidden="true">↓</span></a>
+                    <a class="textLink" href="#serve">להגשה <span>↓</span></a>
                     <p class="recipeSource">הכמויות ושיטת ההכנה מבוססות על IBA. הבחירה בקרח כתוש היא של TWIST.<br />
                         <a href="https://iba-world.com/iba-cocktail/mojito/" lang="en" dir="ltr">IBA: Mojito</a>
                     </p>
@@ -139,20 +148,23 @@
             <div class="photoBreak">
                 <img src="images/mojitoPrep.jpg" alt="מבט מלמעלה על ליים, נענע, קרח וג׳יגר, מוכנים להכנת מוחיטו" />
             </div>
+            <!-- הנחיות להגשה. -->
             <aside class="serving" id="serve">
                 <div class="narrow">
                     <h2>הגשה</h2>
                     <p>מקשטים בענף נענע ובפרוסת ליים. מניחים את הנענע לצד שפת הכוס ומגישים מיד, כשהמשקה קר והסודה מבעבעת.</p>
-                    <a class="textLink" href="#ingredients">חזרה למרכיבים <span aria-hidden="true">↑</span></a>
+                    <a class="textLink" href="#ingredients">חזרה למרכיבים <span>↑</span></a>
                 </div>
             </aside>
+            <!-- קישור למתכון הבא. -->
             <section class="nextRecipe">
                 <div class="narrow">
                     <h2>בפעם הבאה, נגרוני?</h2>
-                    <a class="textLink" href="negroni.html">למתכון נגרוני <span aria-hidden="true">←</span></a>
+                    <a class="textLink" href="negroni.html">למתכון נגרוני <span>←</span></a>
                 </div>
             </section>
         </main>
+        <!-- קישורי המידע והקרדיטים בתחתית העמוד. -->
         <footer id="pageFooter">
             <div class="wrap">
                 <div class="footerBrand">

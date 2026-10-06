@@ -1,5 +1,6 @@
-/* עיצוב הטופס בלבד; הגופנים והניווט נטענים מעיצוב האתר המשותף. */
+/* עיצוב הטופס וחלון הסיכום. הניווט והגופנים מגיעים מעיצוב האתר. */
 
+/* כללי בסיס לטקסט ולשדות. הסלקטורים מגבילים את העיצוב לטופס ולחלון הסיכום. */
 #cocktailBuilder input,
 #finishPopup input,
 #cocktailBuilder select,
@@ -66,6 +67,7 @@
     letter-spacing: 2px;
     margin-bottom: 16px;
 }
+/* הכותרת וההסבר בראש הטופס. */
 #cocktailBuilder .catalogHeader,
 #finishPopup .catalogHeader {
     background-color: #15251c;
@@ -98,6 +100,7 @@
 #cocktailBuilder .builderHeader h1 {
     font-size: 52px;
 }
+/* הטופס והתצוגה מופיעים זה לצד זה כשיש מספיק מקום. */
 #cocktailBuilder .builderLayout,
 #finishPopup .builderLayout {
     padding-top: 46px;
@@ -116,14 +119,17 @@
 #finishPopup .builderForm {
     width: 540px;
     max-width: 100%;
-    margin-left: 4%;
+    margin-left: 0;
+    margin-bottom: 30px;
 }
 #cocktailBuilder .builderPreview,
 #finishPopup .builderPreview {
     width: 420px;
-    max-width: 100%;
+    max-width: 97%;
+    margin: 0 1.5%;
     background-color: #e7e5da;
 }
+/* רווחים וקו מפריד בין שלבי הטופס. */
 #cocktailBuilder .builderForm fieldset,
 #finishPopup .builderForm fieldset {
     padding: 22px 0 30px;
@@ -146,6 +152,7 @@
 #finishPopup .builderForm label {
     font-size: 18px;
 }
+/* עיצוב השדה שבו נותנים שם לקוקטייל. */
 #cocktailBuilder .builderForm input[type="text"],
 #finishPopup .builderForm input[type="text"] {
     display: block;
@@ -162,6 +169,7 @@
     color: #60685f;
     margin-bottom: 16px;
 }
+/* עיצוב אפשרויות הבחירה והמסגרת שלהן. */
 #cocktailBuilder .builderForm .choice,
 #finishPopup .builderForm .choice {
     display: inline-block;
@@ -179,11 +187,7 @@
 #finishPopup .builderForm input {
     vertical-align: middle;
 }
-#cocktailBuilder .builderForm input:focus-visible,
-#finishPopup .builderForm input:focus-visible {
-    outline: 2px solid #73562c;
-    outline-offset: 4px;
-}
+/* כפתור הסיום ממלא את רוחב הטופס ונראה דהוי כשהוא מנוטרל. */
 #cocktailBuilder .builderForm .submitButton,
 #finishPopup .builderForm .submitButton {
     width: 100%;
@@ -194,6 +198,7 @@
     opacity: 0.45;
     cursor: not-allowed;
 }
+/* כפתור האיפוס של הבחירות. */
 #cocktailBuilder .resetButton,
 #finishPopup .resetButton {
     display: block;
@@ -205,18 +210,7 @@
     background-color: transparent;
     cursor: pointer;
 }
-#cocktailBuilder button:focus-visible,
-#finishPopup button:focus-visible,
-#cocktailBuilder select:focus-visible,
-#finishPopup select:focus-visible {
-    outline: 2px solid #73562c;
-    outline-offset: 4px;
-}
-#cocktailBuilder #result,
-#finishPopup #result {
-    margin-top: 22px;
-    font-size: 18px;
-}
+/* הכותרות וההסברים באזור תצוגת המרכיבים. */
 #cocktailBuilder .previewCopy,
 #finishPopup .previewCopy {
     padding: 28px;
@@ -230,16 +224,12 @@
 #finishPopup .previewCopy p {
     margin-bottom: 16px;
 }
-#cocktailBuilder .handwritten {
-    font-family: "Yehezkel", "Assistant", sans-serif;
-    font-size: 30px;
-    color: #73562c;
-}
 #cocktailBuilder .previewNote,
 #finishPopup .previewNote {
     font-size: 15px;
     color: #60685f;
 }
+/* סידור התמונות והכיתובים של הבקבוקים והתוספות. */
 #cocktailBuilder .productShelf,
 #finishPopup .productShelf,
 #cocktailBuilder .extraShelf,
@@ -261,6 +251,7 @@
     width: 100%;
     margin: 0 auto;
 }
+/* הבקבוקים מוסתרים בתחילה. JavaScript מציג את הבקבוק שנבחר. */
 #cocktailBuilder .productShelf .selectedBottle,
 #finishPopup .productShelf .selectedBottle {
     display: none;
@@ -280,15 +271,18 @@
 }
 #cocktailBuilder .productShelf img,
 #finishPopup .productShelf img {
-    width: 100%;
-    height: 190px;
-    object-fit: contain;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
+/* התוספות מתחילות בשקיפות חלקית. סימון בטופס מבליט את התמונה. */
 #cocktailBuilder .extraShelf img,
 #finishPopup .extraShelf img {
-    width: 100%;
-    height: 86px;
-    object-fit: contain;
+    width: 86px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
     opacity: 0.5;
 }
 #cocktailBuilder figcaption,
@@ -302,29 +296,36 @@
     padding: 0 24px;
     margin: 4px 0 12px;
 }
+/* חלון הסיכום מוסתר בתחילה. כשהוא נפתח הוא מכסה את המסך ברקע כהה. */
 #finishPopup.finishPopup {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 10;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
+/* המסגרת קובעת את הרוחב. הריפוד נמצא באלמנט הפנימי ואינו מרחיב אותה. */
 #cocktailBuilder .popupContent,
 #finishPopup .popupContent {
     width: 92%;
     max-width: 900px;
     margin: 30px auto;
-    padding: 28px;
-    box-sizing: border-box;
     background-color: #f2f0e9;
     text-align: right;
 }
+#finishPopup .popupInner {
+    padding: 28px;
+}
+/* פרטי הסיכום מופיעים לצד הכוס. טקסט ארוך נשבר לשורה נוספת. */
 #cocktailBuilder .popupText,
 #finishPopup .popupText {
     display: inline-block;
-    width: 48%;
-    margin-left: 3%;
+    width: 400px;
+    max-width: 100%;
     vertical-align: middle;
     overflow-wrap: anywhere;
 }
@@ -342,6 +343,7 @@
 #finishPopup .popupText .previewNote {
     margin-top: 18px;
 }
+/* הכפתור שסוגר את הסיכום ומחזיר לטופס. */
 #cocktailBuilder #closePopup,
 #finishPopup #closePopup {
     margin-top: 16px;
@@ -352,16 +354,19 @@
     border: 0;
     cursor: pointer;
 }
+/* אזור הכוס הוא ריבוע. התמונות ממוקמות בתוכו זו מעל זו. */
 #cocktailBuilder .glassStage,
 #finishPopup .glassStage {
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    width: 47%;
-    aspect-ratio: 1;
+    width: 400px;
+    max-width: 100%;
+    margin-top: 24px;
     background-color: #15251c;
     overflow: hidden;
 }
+/* שלוש תמונות הכוס נמצאות באותו מקום. JavaScript קובע איזו מהן תהיה גלויה. */
 #cocktailBuilder .glassBase,
 #finishPopup .glassBase {
     position: absolute;
@@ -369,18 +374,24 @@
     top: 0;
     left: 0;
 }
+/* הכוס השקופה נשארת בזרימה הרגילה וקובעת גובה ריבועי לפי התמונה. */
+#finishPopup #clearGlass {
+    position: relative;
+}
 #cocktailBuilder #rumGlass,
 #finishPopup #rumGlass,
 #cocktailBuilder #lemonadeGlass,
 #finishPopup #lemonadeGlass {
     opacity: 0;
 }
+/* שכבות התוספות מוסתרות בתחילה ומופיעות לפי הבחירות בטופס. */
 #cocktailBuilder .glassLayer,
 #finishPopup .glassLayer {
     position: absolute;
     height: auto;
     opacity: 0;
 }
+/* גודל ומיקום לכל תוספת, כדי שתופיע במקום המתאים על הכוס. */
 #cocktailBuilder .umbrellaLayer,
 #finishPopup .umbrellaLayer {
     width: 28%;
@@ -410,37 +421,16 @@
 #finishPopup .berriesLayer {
     width: 48%;
     left: 28%;
-    top: -9%;
+    top: 0;
 }
 
-@media (max-width: 700px) {
-    #cocktailBuilder .builderForm {
-        margin-left: 0;
-    }
-#cocktailBuilder .builderPreview,
-#finishPopup .builderPreview {
-        margin-top: 30px;
-    }
-#cocktailBuilder .popupText,
-#finishPopup .popupText {
-        width: 100%;
-        margin-left: 0;
-    }
-#cocktailBuilder .glassStage,
-#finishPopup .glassStage {
-        display: block;
-        width: 100%;
-        margin-top: 24px;
-    }
-#cocktailBuilder .builderHeader h1 {
-        font-size: 40px;
-    }
+/* אלמנטים בעלי רוחב קבוע ורוחב מרבי יורדים שורה כשהחלון צר. */
+#cocktailBuilder figure,
+#cocktailBuilder figcaption {
+    font-family: "Assistant", Arial, sans-serif;
 }
-
-#cocktailBuilder figure, #cocktailBuilder figcaption { font-family: "Assistant", Arial, sans-serif; }
-#cocktailBuilder select { box-sizing: border-box; }
-#cocktailBuilder .builderForm { margin-left: 0; }
-#cocktailBuilder .builderPreview { margin-right: 3%; }
-@media (max-width: 1100px) {
-    #cocktailBuilder .builderPreview { margin: 30px 0 0; }
+/* הרוחב כולל מקום לריפוד ולמסגרת בלי לחרוג מרוחב הטופס. */
+#cocktailBuilder select {
+    width: 90%;
+    padding: 12px 4%;
 }

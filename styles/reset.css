@@ -1,3 +1,4 @@
+/* איפוס עיצוב ברירת המחדל של הדפדפן לפני טעינת עיצוב האתר. */
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -69,14 +70,14 @@ a {
     background:transparent;
 }
 
-/* change colours to suit your needs */
+/* עיצוב בסיסי לטקסט שמסומן כתוספת. */
 ins {
     background-color:#ff9;
     color:#000;
     text-decoration:none;
 }
 
-/* change colours to suit your needs */
+/* עיצוב בסיסי לטקסט מסומן. */
 mark {
     background-color:#ff9;
     color:#000; 
@@ -98,7 +99,7 @@ table {
     border-spacing:0;
 }
 
-/* change border colour to suit your needs */
+/* עיצוב קו הפרדה. */
 hr {
     display:block;
     height:1px;
